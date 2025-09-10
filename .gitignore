@@ -1,0 +1,177 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+go.work
+
+# Build artifacts
+bin/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Test artifacts
+test-results/
+coverage.out
+
+# Docker
+.dockerignore
+
+# Temporary files
+tmp/
+temp/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Backup files
+*.bak
+*.backup
+
+# Configuration files with sensitive data
+config/production.yaml
+config/staging.yaml
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# Kubernetes secrets
+secrets/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Local development
+local/
+dev/
+
+# Go module cache
+go.sum
+
+# Coverage reports
+coverage.html
+coverage.xml
+
+# Air live reload
+.air.toml
+tmp/
+
+# Delve debugger
+__debug_bin
+
+# Go build cache
+.cache/
+
+# Performance profiles
+*.prof
+*.pprof
+
+# Memory dumps
+*.mem
+
+# Vendor directory (if using)
+vendor/
+
+# Docker volumes data
+postgres_data/
+redis_data/
+kafka_data/
+grafana_data/
+prometheus_data/
+zookeeper_data/
+zookeeper_logs/
+
+# Test artifacts
+test-results.txt
+*.test.log
+
+# Build outputs
+*.exe
+payment-system
+main
+
+# Editor backups
+*.orig
+*.rej
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Visual Studio Code
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*

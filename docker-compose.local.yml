@@ -1,0 +1,37 @@
+services:
+  # Solo PostgreSQL para desarrollo local
+  postgres:
+    image: postgres:15-alpine
+    container_name: payment-postgres-local
+    environment:
+      POSTGRES_DB: payment_system
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_local_data:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis para cache (opcional)
+  redis:
+    image: redis:7-alpine
+    container_name: payment-redis-local
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_local_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  postgres_local_data:
+  redis_local_data:
